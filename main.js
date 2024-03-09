@@ -1,17 +1,21 @@
-function cambiaColorRojo() {
-    const square = document.getElementById('square')
-    square.classList.remove('blue')
-    square.classList.add('red')
+function cambiaColor(color1, color2) {
+    const square = document.getElementById("square")
+    square.classList.remove(color1)
+    square.classList.add(color2)
 }
 
-function cambiaColorAzul() {
-    const square = document.getElementById('square')
-    square.classList.remove('red')
-    square.classList.add('blue')
+function colorAzul() {
+    cambiaColor("red", "blue")
+    console.log("azul")
+}
+
+function colorRojo() {
+    cambiaColor("blue", "red")
+    console.log("rojo")
 }
 
 const botonRojo = document.getElementById('botonRojo')
-botonRojo.onclick = cambiaColorAzul
+botonRojo.onclick = colorAzul
 
 const botonAzul = document.getElementById('botonAzul')
-botonAzul.onclick = cambiaColorRojo
+botonAzul.onclick = colorRojo
