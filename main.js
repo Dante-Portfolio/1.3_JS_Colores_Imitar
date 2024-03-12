@@ -4,18 +4,22 @@ function cambiaColor(color1, color2) {
     square.classList.add(color2)
 }
 
-function colorAzul() {
-    cambiaColor("red", "blue")
-    console.log("azul")
+function colorAzul(event) {
+    const button = event.target
+    const primerColor = button.attributes.primerColor.value
+    const segundoColor = button.attributes.segundoColor.value
+    cambiaColor(primerColor, segundoColor)
 }
 
-function colorRojo() {
-    cambiaColor("blue", "red")
-    console.log("rojo")
+function colorRojo(event) {
+    const button = event.target
+    const primerColor = button.attributes.primerColor.value
+    const segundoColor = button.attributes.segundoColor.value
+    cambiaColor(primerColor, segundoColor)
 }
 
 const botonRojo = document.getElementById('botonRojo')
-botonRojo.onclick = colorAzul
+botonRojo.onclick = colorRojo
 
 const botonAzul = document.getElementById('botonAzul')
-botonAzul.onclick = colorRojo
+botonAzul.onclick = colorAzul
