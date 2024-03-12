@@ -1,10 +1,8 @@
 function cambiaColor(event) {
     const button = event.target
-    const primerColor = button.attributes.primerColor.value
-    const segundoColor = button.attributes.segundoColor.value
-
+    const nuevoColor = button.attributes.color.value
     const square = document.getElementById("square")
-    square.classList.replace(primerColor, segundoColor)
+    square.className = `square ${nuevoColor}`
 }
 
 const botonRojo = document.getElementById('botonRojo')
