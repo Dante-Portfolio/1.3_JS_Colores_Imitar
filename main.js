@@ -10,3 +10,6 @@ botonRojo.onclick = cambiaColor
 
 const botonAzul = document.getElementById('botonAzul')
 botonAzul.onclick = cambiaColor
+
+const botonVerde = document.getElementById('botonVerde')
+botonVerde.onclick = cambiaColor
