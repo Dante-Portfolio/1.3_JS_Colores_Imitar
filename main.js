@@ -5,7 +5,7 @@ function cambiaColor(event) {
     square.className = `square ${nuevoColor}`
 }
 
-const botones = document.getElementsByClassName("botones")
+const botones = document.querySelectorAll("[data-type=botones]")
 for (const button of botones) {
     button.onclick = cambiaColor
 }
